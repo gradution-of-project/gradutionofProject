@@ -6,6 +6,12 @@ body{
     
     user-zoom: 110%;
 }
+textarea.form-control{
+    padding: 8px;
+    overflow: hidden;
+    
+    resize: none;
+}
 /* register div*/
 
 .divmid ,.divmid-login,.divmid-doctor{

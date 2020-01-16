@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="img/logo-header2.png">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
     
     <link rel="stylesheet" href="css/bootstrap.css">     
@@ -18,7 +19,7 @@
        
             <div class="divmid-doctor col-lg-5 col-md-8 col-sm-10" id="divmid-doctor">
                 <div class="login-logo">
-                    <img src="img\logo-header2.png">
+                    <img src="img/logo-header2.png">
                     <h2>Add Doctor</h2>
                 </div>
                 <div class="bt-back-doctor">Back</div>

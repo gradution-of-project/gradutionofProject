@@ -1,14 +1,14 @@
 body{
-
+    background-image: url("chose-back.jpg");
     background-size: cover;
     background-attachment: fixed;
-    padding-top: 3%;
-
+    padding-top: 1%;
+    
 }
 textarea.form-control{
     padding: 8px;
     overflow: hidden;
-
+    
     resize: none;
 }
 /*  the main comment*/
@@ -35,7 +35,7 @@ textarea.form-control{
 .person_comment_img ,.comment_img{
     width: 80px;
     height: 80px;
-
+    
 }
 
 

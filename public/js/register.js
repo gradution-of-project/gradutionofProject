@@ -15,19 +15,7 @@ $(function(){
       
    });
 
-   /* chose kind register */
-   // $(".doctor-regist").click(function(){
-   //    $(".chose-kind").hide(1000);
-   //    $(".divmid").show(1000);
-   //    $(".clinic-address").show();
-   // });
    
-   // $(".user-regist").click(function(){
-   //    $(".chose-kind").hide(1000);
-   //    $(".divmid").show(1000);
-      
-   // });
-
    /*btn back*/
    $(".bt-back").click(function(){
       window.history.back();
@@ -168,37 +156,45 @@ $(function(){
 
 
    /* show hide password  */
-   $(".show-password").on('click',function(){
-      $(".show-password").hide();
-      $(".hide-password").show();
-      $(".password-input").attr('type','text');
-   });
    $(".hide-password").on('click',function(){
       $(".hide-password").hide();
       $(".show-password").show();
+      $(".password-input").attr('type','text');
+   });
+   $(".show-password").on('click',function(){
+      $(".show-password").hide();
+      $(".hide-password").show();
       $(".password-input").attr('type','password');
    });
    
-   $(".show-password1").on('click',function(){
-      $(".show-password1").hide();
-      $(".hide-password1").show();
-      $(".password-input1").attr('type','text');
-   });
    $(".hide-password1").on('click',function(){
       $(".hide-password1").hide();
       $(".show-password1").show();
+      $(".password-input1").attr('type','text');
+   });
+   $(".show-password1").on('click',function(){
+      $(".show-password1").hide();
+      $(".hide-password1").show();
       $(".password-input1").attr('type','password');
    });
 
-   $(".show-password2").on('click',function(){
-      $(".show-password2").hide();
-      $(".hide-password2").show();
-      $(".password-input1-confirm").attr('type','text');
-   });
    $(".hide-password2").on('click',function(){
       $(".hide-password2").hide();
       $(".show-password2").show();
+      $(".password-input1-confirm").attr('type','text');
+   });
+   $(".show-password2").on('click',function(){
+      $(".show-password2").hide();
+      $(".hide-password2").show();
       $(".password-input1-confirm").attr('type','password');
+   });
+
+
+
+   //  make textarea dinamic with line
+   $("textarea").on('input', function() {
+      this.style.height = "";
+      this.style.height = Math.min(this.scrollHeight) + "px";
    });
 
 

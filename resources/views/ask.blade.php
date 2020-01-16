@@ -4,14 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
+    <link rel="shortcut icon" href="img/logo-header2.png">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
     <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/co.css">
     <title>comment</title>
 
 </head>
 <body>
+    <!--  -----   navbar  ------    -->
+
+        @extends("navbarextend");
     <div class="container">
         <!--  add post(main comment) -->
         <div class="add-post">
@@ -29,7 +33,7 @@
                     </div>
                </div>
                <!--  to sent the comment -->
-               <button type="submit" class="btn btn-primary add-post-submit">Submit</button>
+               <button type="submit" class="btn btn-primary add-post-submit">Ask</button>
                <div class="clearfix"></div>
             </form>
         </div>
@@ -75,7 +79,7 @@
                                 <button class="btn btn-primary make-replay-uploadimg-bt">
                                     <i class="fas fa-camera"></i>
                                 </button>
-                                <input type="file" id="make-replay-file" accept="image/*" style="display: none;" multiple>
+                                <input type="file" class="make-replay-file" accept="image/*" style="display: none;" multiple>
                             </div>
                         </div>
                         <!--  to sent the comment -->
@@ -89,25 +93,27 @@
 
 
                 <!--  replayied comment -->
-                <div class="comments">
-                    <div class="row">
-                        <div class="col-2" style="float: left;">
-                            <div class="text-center">
-                                <img class="comment_img rounded-circle" src="img/1.jpg" >
-                                <div >user name</div>
-                            </div>
+                <div class="all">
+                    <div class="comments">
+                        <div class="row">
+                            <div class="col-2" style="float: left;">
+                                <div class="text-center">
+                                    <img class="comment_img rounded-circle" src="img/1.jpg" >
+                                    <div >user name</div>
+                                </div>
 
-                        </div>
-                        <div class="col-10" style="float: left;">
-                            <!--  text replay -->
-                            <p>replay 1</p>
-                            <img class="replay-image" src="">
-                            <!-- interaction replay like comment -->
-                            <div class="interaction-replay">
-                                <div class="interaction-replay-like">
-                                    <span>0</span>
-                                    <i class="fas fa-thumbs-up"></i>
-                                    like
+                            </div>
+                            <div class="col-10" style="float: left;">
+                                <!--  text replay -->
+                                <p>replay 1</p>
+                                <img class="replay-image" src="">
+                                <!-- interaction replay like comment -->
+                                <div class="interaction-replay">
+                                    <div class="interaction-like">
+                                        <span>0</span>
+                                        <i class="fas fa-thumbs-up"></i>
+                                        like
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -175,50 +181,52 @@
 
 
                 <!--  replayied comment -->
-                <div class="comments">
-                    <div class="row">
-                        <div class="col-2" style="float: left;">
-                            <div class="text-center">
-                                <img class="comment_img rounded-circle" src="img/1.jpg" >
-                                <div >user name</div>
-                            </div>
+                <div class="all">
+                    <div class="comments">
+                        <div class="row">
+                            <div class="col-2" style="float: left;">
+                                <div class="text-center">
+                                    <img class="comment_img rounded-circle" src="img/1.jpg" >
+                                    <div >user name</div>
+                                </div>
 
-                        </div>
-                        <div class="col-10" style="float: left;">
-                            <!--  text replay -->
-                            <p>replay 1</p>
-                            <img class="replay-image" src="">
-                            <!-- interaction replay like comment -->
-                            <div class="interaction-replay">
-                                <div class="interaction-replay-like">
-                                    <span>0</span>
-                                    <i class="fas fa-thumbs-up"></i>
-                                    like
+                            </div>
+                            <div class="col-10" style="float: left;">
+                                <!--  text replay -->
+                                <p>replay 1</p>
+                                <img class="replay-image" src="">
+                                <!-- interaction replay like comment -->
+                                <div class="interaction-replay">
+                                    <div class="interaction-like">
+                                        <span>0</span>
+                                        <i class="fas fa-thumbs-up"></i>
+                                        like
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <!--  replayied comment -->
-                <div class="comments">
-                    <div class="row">
-                        <div class="col-2" style="float: left;">
-                            <div class="text-center">
-                                <img class="comment_img rounded-circle" src="img/1.jpg" >
-                                <div >user name</div>
-                            </div>
+                    <!--  replayied comment -->
+                    <div class="comments">
+                        <div class="row">
+                            <div class="col-2" style="float: left;">
+                                <div class="text-center">
+                                    <img class="comment_img rounded-circle" src="img/1.jpg" >
+                                    <div >user name</div>
+                                </div>
 
-                        </div>
-                        <div class="col-10" style="float: left;">
-                            <!--  text replay -->
-                            <p>replay 1</p>
-                            <img class="replay-image" src="">
-                            <!-- interaction replay like comment -->
-                            <div class="interaction-replay">
-                                <div class="interaction-replay-like">
-                                    <span>0</span>
-                                    <i class="fas fa-thumbs-up"></i>
-                                    like
+                            </div>
+                            <div class="col-10" style="float: left;">
+                                <!--  text replay -->
+                                <p>replay 1</p>
+                                <img class="replay-image" src="">
+                                <!-- interaction replay like comment -->
+                                <div class="interaction-replay">
+                                    <div class="interaction-like">
+                                        <span>0</span>
+                                        <i class="fas fa-thumbs-up"></i>
+                                        like
+                                    </div>
                                 </div>
                             </div>
                         </div>

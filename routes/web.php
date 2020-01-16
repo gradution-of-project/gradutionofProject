@@ -15,8 +15,13 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/asking', function () {
-  return view('asking');
+Route::get('/ask', function () {
+  return view('ask');
+
+});
+
+Route::get('/comment', function () {
+    return view('comment');
 
 });
 Route::get('/register', function () {
