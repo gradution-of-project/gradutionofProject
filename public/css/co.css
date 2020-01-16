@@ -1,0 +1,95 @@
+body{
+
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: 3%;
+
+}
+textarea.form-control{
+    padding: 8px;
+    overflow: hidden;
+
+    resize: none;
+}
+/*  the main comment*/
+.add-post{
+    border: 1px solid #CED4DA;
+    padding: 30px;
+    border-radius: 5px;
+}
+.upload-img-bt{
+    float: left;
+}
+.add-post-submit{
+    float: right;
+}
+
+        /*comment and replay div*/
+.comment-replay{
+    border: 1px solid #CED4DA;
+    padding: 30px;
+    border-radius: 5px;
+    margin: 10px 0px;
+}
+        /*  person image profile  */
+.person_comment_img ,.comment_img{
+    width: 80px;
+    height: 80px;
+
+}
+
+
+/* like cooment  **/
+.interaction,.interaction-replay{
+    display: flex;
+    text-align: center;
+    border-top: 1px solid #CED4DA;
+    border-bottom: 1px solid #CED4DA;
+    padding: 5px;
+}
+.interaction div,.interaction-replay div{
+    flex: 1 0;
+    cursor: pointer;
+    padding: 5px;
+    color: #007bff;
+}
+.interaction div:hover ,.interaction-replay div:hover{
+    background: #007bff;
+    color: white;
+}
+
+
+/*   make replay for cooment   */
+.make-replayied{
+    padding: 10px;
+    position: relative;
+}
+.image ,.replay-image{
+    width: 150px;
+    height: 130px;
+    display: none;
+}
+.make-replay-uploadimg-div{
+    position: absolute;
+    bottom: 28px;
+    right: 53px;
+}
+.make-replayied-send{
+    position: absolute;
+    bottom: 28px;
+    right: 10px;
+}
+.btn-primary{
+    color: #007bff;
+    background-color: transparent;
+}
+
+/*  anwser  */
+
+.comments{
+    background: #f4f9fc;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px 0px;
+}
+
