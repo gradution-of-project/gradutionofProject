@@ -20,9 +20,18 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/#our-doctors">DOCTORS</a>
                 </li>
-                <li class="nav-item">
+
+                @php
+                if (Auth::guest()){
+                 echo '<li class="nav-item">
                     <a class="nav-link sign-in" href="/register">SIGN IN</a>
-                </li>
+                </li>';
+                }else{
+                echo '<li class="nav-item">
+                    <a class="nav-link sign-in" href="'. route("logout") .'">Logout</a>
+                </li> ';
+                }
+                @endphp
                 <li class="nav-item">
                     <!------drop down profile list------->
                     <div class="btn-group profile-div">
@@ -30,19 +39,27 @@
                             <img class="profile-img" src="img\choseuse.png">
                         </button>
                         <div class="dropdown-menu profile-menu">
-                            <a class="dropdown-item" href="/editProfile">
+                            @php
+                                if (!(Auth::guest())){
+                                  echo '<a class="dropdown-item" href="/editprofile">
                                 <i class="fas fa-user"></i><span style="padding-left:10px;">Profile</span>
                             </a>
                             <a class="dropdown-item" href="/comment">
                                 <i class="fas fa-comment"></i><span style="padding-left:10px;">Comment</span>
-                            </a>
-                            <a class="dropdown-item" href="/adddoctor">
+                            </a>';
+                                }
+
+
+                           echo '<a class="dropdown-item" href="/adddoctor">
                                 <i class="fas fa-user-md"></i><span style="padding-left:10px;">Add Doctor</span>
                             </a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="">
-                                <i class="fas fa-sign-out-alt"></i><span style="padding-left:10px;">Log Out</span>
-                            </a>
+                            <div class="dropdown-divider"></div>';
+                            if(!(Auth::guest())){
+                           echo '<a class="dropdown-item" href="'.route('logout').'">
+                                <i class="fas fa-sign-out-alt"></i><span  style="padding-left:10px;">Log Out</span>
+                            </a>';
+                            }
+                            @endphp
                         </div>
                     </div>
                 </li>

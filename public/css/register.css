@@ -3,20 +3,20 @@ body{
     background-size: cover;
     background-attachment: fixed;
     padding-top: 3%;
-    
+
     user-zoom: 110%;
 }
 textarea.form-control{
     padding: 8px;
     overflow: hidden;
-    
+
     resize: none;
 }
 /* register div*/
 
 .divmid ,.divmid-login,.divmid-doctor{
     overflow: hidden;
-    
+
     margin:-400px  auto;
     border: 1px solid #eee;
     border-radius: 10px;
@@ -40,12 +40,12 @@ textarea.form-control{
 .divmid h2{
  text-align: center;
     color: #007bff;
-    
+
 }
 .btn{
     width: 50%;
     margin-left: -70%;
-    margin-top: 20px;  
+    margin-top: 20px;
     border-radius: 25px;
 }
 .hide{
@@ -68,9 +68,9 @@ textarea.form-control{
 ,.descripe-div{
     position: relative;
     padding-top: 32px;
-    
+
 }
-.email-input ,.password-input 
+.email-input ,.password-input
 ,.fname-input,.lname-input,.email-input1,.password-input1,.password-input1-confirm,.phone-input
 ,.select-input,.date-input,.descripe-input
 {
@@ -107,7 +107,7 @@ textarea.form-control{
 }
 /*                                            end edit 31-12-2019   */
 .bt-sign-up{
-    
+
     display: inline;
     cursor: pointer;
 }
@@ -166,3 +166,7 @@ textarea.form-control{
     border-radius: 200px;
 }
 
+.error{
+    margin: 20px auto;
+    width: 40%;
+}

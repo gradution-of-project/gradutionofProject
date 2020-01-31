@@ -225,6 +225,7 @@ body{
 .footer{
     background:#182028 ;
     margin-top: 20;
+    position: relative;
 }
 
 
@@ -260,7 +261,25 @@ body{
     font-weight: bold;
     margin: 0;
 }
+.arrow-top{
+    position: fixed;
+    bottom: 70px;
+    right: 40px;
+    background: #40B0DE;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 50% ;
+     display: none;
+}
+.arrow-top:hover{
 
+    background: #182020;
+
+}
+.arrow-top .fa-chevron-up{
+    color: #ffffff;
+    font-size: 30px;
+}
 /*----------------------for anamiation------------------------*/
 .containerhide{
     overflow: hidden;

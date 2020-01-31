@@ -275,7 +275,7 @@
 
                     <p>
                     <span>Register for free</span>
-                    <a class="btn btn-rounded btn-light footer-btn" href="/register">Sign In</a>
+                    <a class="btn btn-rounded btn-light footer-btn" href="/registeration">Sign In</a>
                     </p>
                     <ul class="ml-auto footerlinks">
                         <li class="nav-item active">
@@ -294,8 +294,13 @@
 
 
                 </div>
+
                 <div style="background: #111111;">
                     <p>© 2019 Copyright: All right reserved.Made with us for a better teeth. </p>
+                </div>
+
+                <div class="arrow-top">
+                    <i class="fas fa-chevron-up"></i>
                 </div>
 
             </div>

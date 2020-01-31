@@ -13,7 +13,7 @@
 
 Route::get('/', function () {
     return view('home');
-});
+})->name('/');
 
 Route::get('/ask', function () {
   return view('ask');
@@ -32,9 +32,20 @@ Route::get('/adddoctor', function () {
     return view('adddoctor');
 });
 
-Route::get('/editProfile', function () {
-    return view('editProfile');
+    Route::get('/editprofile', 'editprofileController@showprofile')->name('editprofile');
+    Route::post('/editprofile', 'editprofileController@updateprofile')->name('updateprofile');
+    Route::post('/auth.register', 'userController@signup')->name('register');
+    Route::post('/loginuser', 'userController@signin')->name('login');
 
-});
+
+Route::post('/adddoctors', 'doctorController@signup')->name('registdoctor');
+//Route::post('/login', 'doctorController@signin')->name('createLogin');
+Route::post('/ask', 'postController@savepost')->name('savepost');
+Route::get('/logout', 'userController@logout')->name('logout');
 
 
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

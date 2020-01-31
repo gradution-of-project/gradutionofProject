@@ -12,22 +12,29 @@
         <!--  -----   navbar  ------    -->
         @extends("navbarextend");
 
+        @if(count($dataprofile) > 0)
+             @foreach($dataprofile as $edit)
+
+
+
         <div class="" id="firstPage">
             <!--  -----   edit profile page  ------    -->
 
-                <form class="container" action="" method="post">
+                <form class="container" action="{{route('updateprofile')}}" method="post" enctype="multipart/form-data">
+                    {{csrf_field()}}
                     <div class="row">
                         <!-- edit photo-->
                         <div class="container col-4 pro-picture">
                             <div>
-                                <img src="img\choseuse.png" id="imgg" class="rounded-circle">
+
+                                <img src="publicimages/_20200120_142155.JPG" id="imgg" class="rounded-circle">
                             </div>
                             <div class="">
                                 <button class="btn btn-primary photo-btn" >
                                     <i class="fas fa-pen"></i>
                                 </button>
                                 <br><small>Select file < 1500 KB</small>
-                                <br><input type="file" class="uploadfile" id="file" accept="image/*">
+                                <br><input type="file" class="uploadfile" id="file" accept="image/*" name="image">
                             </div>
                         </div>
                         <!-- edit detail-->
@@ -35,42 +42,33 @@
                             <div class="row pro-detail">
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <label for="fname">First Name</label>
-                                        <input type="text" class="form-control">
+                                        <label >First Name</label>
+                                        <input type="text" class="form-control" name="fname" value="{{$edit->fristname}}">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <label for="lname">Last Name</label>
-                                        <input type="text" class="form-control">
+                                        <label >Last Name</label>
+                                        <input type="text" class="form-control" name="lname" value="{{$edit->lastname}}">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label for="email">Email Address</label>
-                                        <input type="email" class="form-control" name="email">
+                                        <input type="email" class="form-control" name="email" value="{{$edit->email}}">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <label for="fname">Phone Number</label>
-                                        <input type="text" class="form-control">
+                                        <label>Phone Number</label>
+                                        <input type="text" class="form-control" name="phone" value="{{$edit->phone}}">
                                     </div>
                                 </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group" >
-                                        <label for="lname">Gender</label>
-                                        <select class="form-control ">
-                                            <option class="" value="0" disabled selected>.....</option>
-                                            <option value="male">Male</option>
-                                            <option value="female">Female</option>
-                                        </select>
-                                    </div>
-                                </div>
+
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label for="lname">Date</label>
-                                        <input class="form-control" type="date" name="bday">
+                                        <input class="form-control" type="date" name="brithdate" value="{{$edit->brithdate}}">
 
                                     </div>
                                 </div>
@@ -79,7 +77,7 @@
                                     <div class="col-sm-6">
                                         <div class="form-group text-center">
                                             <label for="pwd">Old Password</label>
-                                            <input type="password" class="form-control">
+                                            <input type="password" class="form-control" name="oldpassword">
                                         </div>
                                     </div>
                                     <div class="col-sm-3"></div>
@@ -87,13 +85,13 @@
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label for="pwd">New Password</label>
-                                        <input type="password" class="form-control">
+                                        <input type="password" class="form-control" name="newpassword">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label for="pwd">Confirm New Password</label>
-                                        <input type="password" class="form-control">
+                                        <input type="password" class="form-control" name="confirampassword">
                                     </div>
                                 </div>
                             </div>
@@ -106,8 +104,21 @@
                         </div>
                     </div>
                 </form>
+            <div class="alert alert-danger error">
+                @if(count($errors)>0)
+                    @foreach($errors->all() as $error)
+                    <p>{{$error}}</p>
+                    @endforeach
+                    @endif
+                @if(!empty($wrong))
+                <p>{{$wrong}}</p>
+                    @endif
+
+            </div>
         </div>
 
+             @endforeach
+        @endif
         <!--     footer    -->
         <div class="footer">
             <div style="background: #111111;">

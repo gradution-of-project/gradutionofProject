@@ -19,17 +19,17 @@
     <div class="container">
         <!--  add post(main comment) -->
         <div class="add-post">
-            <form>
+            <form action="{{route('savepost')}}" method="post" enctype="multipart/form-data">
                 <!--  add comment text-->
                 <div class="form-group">
-                    <textarea class="form-control" id="" ></textarea>
+                    <textarea class="form-control" id=""  name="postbody"></textarea>
                 </div>
                 <!--  upload img to explain the case of patient-->
                 <div class="upload-img">
                     <div class="img-comment-upload"></div>
                     <div class="">
                         <button class="btn btn-primary uploadimg-bt">Upload Image</button>
-                        <input type="file" id="file" accept="image/*" style="display: none;" multiple >
+                        <input type="file" id="file" accept="image/*" name="image[]" style="display: none;" multiple >
                     </div>
                </div>
                <!--  to sent the comment -->
@@ -43,7 +43,7 @@
             <div class="col-2 text-center">
                 <div>
                     <img class="person_comment_img rounded-circle" src="img/1.jpg">
-                    <div class="text-center">user name</div>
+                    <div class="text-center">{{Session::get('data.fname')}} {{Session::get('data.lname')}}</div>
                 </div>
             </div>
 
