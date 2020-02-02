@@ -38,6 +38,14 @@ class editprofileController extends Controller
         }
         else {
 
+                $namefile=$edit->image;
+            if ($request->hasFile('image')) {
+                $file = $request->file('image');
+                $exetantion = $file->getClientOriginalName();
+                $namefile = time() .'.'.$exetantion;
+                $file->move(  'publicimages/',$namefile);
+
+            }
                 user::where('id', auth()->user()->id)->update([
                     'fristname' => $request->input('fname'),
                     'lastname' => $request->input('lname'),
@@ -45,7 +53,7 @@ class editprofileController extends Controller
                     'password' => bcrypt($request->input('newpassword')),
                     'brithdate' => $request->input('brithdate'),
                     'phone' => $request->input('phone'),
-
+                     'image'=> $namefile
 
                 ]);
                 return view('home');

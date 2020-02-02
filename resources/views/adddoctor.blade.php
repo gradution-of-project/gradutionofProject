@@ -15,7 +15,15 @@
 
     <div class="container">
 
-
+            @if(count($errors)> 0)
+                <div class="alert alert-danger">
+                    @foreach($errors->all() as $error)
+                    <ul>
+                        <li>{{$error}}</li>
+                    </ul>
+                    @endforeach
+                </div>
+             @endif
             <!--------------------------  register for new doctor        ------------------------->
 
             <div class="divmid-doctor col-lg-5 col-md-8 col-sm-10" id="divmid-doctor">
@@ -52,7 +60,7 @@
                     </div>
                     <!--c pass-->
                     <div class="form-group password-div1-confirm">
-                        <input type="password" class="form-control password-input1-confirm" id="exampleDropdownFormPassword1"  name="confrimpassword>
+                        <input type="password" class="form-control password-input1-confirm" id="exampleDropdownFormPassword1"  name="confrimpassword">
                         <span class="password-char1-confirm">Confirm Password</span>
                         <span class="show-password2"><i class="fa fa-eye" aria-hidden="true"></i></span>
                         <span class="hide-password2 hide"><i class="fa fa-eye-slash" aria-hidden="true"></i></span>
@@ -60,8 +68,8 @@
                     <!--Gender-->
                     <div class="form-group" >
 
-                        <select class="form-control select-input" name="sl-gender">
-                            <option value="0" disabled selected>Gender</option>
+                        <select class="form-control select-input" name="sl-gender"  >
+                            <option value="0" disabled selected></option>
                             <option value="male">Male</option>
                             <option value="female">Female</option>
                         </select>
@@ -77,20 +85,20 @@
                     </div>
                     <!--  description   -->
                     <div class="form-group descripe-div">
-                        <textarea rows="3" class="form-control descripe-input"  name="description" ></textarea>
+                        <textarea rows="3" class="form-control descripe-input"  name="description" >{{ Request::old('description')}}</textarea>
                         <span class="descripe-char">Put Description About Doctor</span>
                     </div>
 
 
                     <!--delete-->
-                    <div class="form-group hide clinic-address">
+                    <div class="form-group  clinic-address">
                         <label for="exampleDropdownFormEmail1">Clenic s Adress</label>
-                        <input type="text" class="form-control" id="exampleDropdownFormEmail1" placeholder="adress clenic" name="clenicAdress">
+                        <input type="text" class="form-control" id="exampleDropdownFormEmail1" placeholder="adress clenic" name="clenicAdress" value="{{ Request::old('clenicAdress')}}">
                     </div>
                     <div class="form-group" >
 
                         <select class="form-control select-input" name="sl-role">
-                            <option value="0" disabled selected>Gender</option>
+                            <option value="0" disabled selected>Role</option>
                             <option value="male">Admain</option>
                             <option value="female">normal doctor</option>
                         </select>

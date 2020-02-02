@@ -1,6 +1,6 @@
 $(function(){
-   
-   
+
+
 
    /* animation on start*/
    $(".divmid-login").animate({"marginTop":"0px"},700);
@@ -12,10 +12,10 @@ $(function(){
    $(".bt-sign-up").click(function(){
       $(".divmid-login").hide(1000);
       $(".divmid").show(1000);
-      
+
    });
 
-   
+
    /*btn back*/
    $(".bt-back").click(function(){
       window.history.back();
@@ -107,7 +107,7 @@ $(function(){
          $('.password-char1-confirm').css({'color':'#7A8489'});
          $('.password-char1-confirm').animate({'top':'39px'},500);
       }
-   }); 
+   });
    /* animate for phone */
    $('.phone-input').on("focus",function(){
       $('.phone-char').css({'color':'#007BFF'});
@@ -150,7 +150,7 @@ $(function(){
 
           };
           reader.readAsDataURL(input.files[0]);
-      }    
+      }
   });
 
 
@@ -166,7 +166,7 @@ $(function(){
       $(".hide-password").show();
       $(".password-input").attr('type','password');
    });
-   
+
    $(".hide-password1").on('click',function(){
       $(".hide-password1").hide();
       $(".show-password1").show();
@@ -197,6 +197,23 @@ $(function(){
       this.style.height = Math.min(this.scrollHeight) + "px";
    });
 
+
+      if ( $('.email-input1 , .fname-input, .lname-input ,.descripe-input, .phone-input').val() != '') {
+          $('.fname-char').css({'color':'#007BFF'});
+          $('.fname-char').animate({'top':'9px'},500);
+          $('.lname-char').css({'color':'#007BFF'});
+          $('.lname-char').animate({'top':'9px'},500);
+          $('.email-char1').css({'color':'#007BFF'});
+          $('.email-char1').animate({'top':'9px'},500);
+          $('.descripe-char').css({'color':'#007BFF'});
+          $('.descripe-char').animate({'top':'9px'},500);
+          $('.descripe-char').text('Description');
+          $('.phone-char').css({'color':'#007BFF'});
+          $('.phone-char').animate({'top':'9px'},500);
+          $('.descripe-char').css({'color':'#007BFF'});
+          $('.descripe-char').animate({'top':'9px'},500);
+          $('.descripe-char').text('Description');
+      }
 
 
 

@@ -32,18 +32,23 @@ class doctorController extends Controller
             $doctor->role=$request->input('sl-role');
             if ($request->hasFile('image')) {
                 $file = $request->file('image');
-                $namefile = $file->getClientOriginalName();
-                $file->move(public_path() . 'images',$namefile);
+                $exetantion = $file->getClientOriginalName();
+                $namefile=time() .'.'. $exetantion;
+                $file->move(  'publicimages/',$namefile);
                 $doctor->image=$namefile;
             } else {
                 return $request;
                 $doctor->image='';
             }
             $doctor->save();
-            return redirect()->route('/');
+            return  redirect()->route('/');
         }
 
         }
+
+
+
+
     public function signin(Request $request){
 
         $this->validate($request,[
@@ -73,4 +78,6 @@ class doctorController extends Controller
         ]);
         return $request->all();
     }
+
+
 }

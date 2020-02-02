@@ -209,16 +209,18 @@ body{
 .doctors_img{
     float: left;
     border-radius: 10px;
+        width: 40%;
+        height: 35%;
 }
 .doctors_detail{
     float: left;
-    margin: 10;
+    margin: 10px;
     padding: 10px;
 }
 .doctors_detail h1{
     font-weight: 500;
     font-size: 45px;
-    margin-bottom: 20;
+    margin-bottom: 20px;
 }
 
 /*    foooter       */

@@ -26,6 +26,7 @@ class postController extends Controller
                  $filename=$file->getClientOriginalName();
             }
         }
+        return view('ask');
     }
 
    public  function showallpost(){

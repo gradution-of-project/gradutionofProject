@@ -222,50 +222,27 @@
             <div class="container containerhide" id="our-doctors">
                 <h1 class="hed1">Our Doctors</h1>
                 <div class="row">
+                    @if(isset($datadoctor) )
+                    @if( count($datadoctor ) > 0)
+                        @foreach($datadoctor  as $data)
                     <div class="doctors col-md-6 col-sm-12 ourdoc-div">
-                        <img src="img\team-1.jpg" class="doctors_img">
+                        <img src="publicimages\{{$data->image}}" class="doctors_img">
                         <div class="doctors_detail">
-                            <h1>Henry  Doe</h1>
+                            <h1>{{$data->fristname}} {{$data->lastname}}</h1>
                             <p>
-                                Details Clinc<br>
-                                Details Phone<br>
-                                Details Email<br>
+                                {{$data->clenicAdress}}<br>
+                                {{$data->phone}}<br>
+                                {{$data->email}}<br>
+                                {{$data->describtion}}<br>
+
                             </p>
                         </div>
                     </div>
-                    <div class="doctors col-md-6 col-sm-12 ourdoc-div">
-                        <img src="img\team-2.jpg" class="doctors_img">
-                        <div class="doctors_detail">
-                            <h1>Henry  Doe</h1>
-                            <p>
-                                Details Clinc<br>
-                                Details Phone<br>
-                                Details Email<br>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="doctors col-md-6 col-sm-12 ourdoc-div">
-                        <img src="img\team-3.jpg" class="doctors_img">
-                        <div class="doctors_detail">
-                            <h1>Henry  Doe</h1>
-                            <p>
-                                Details Clinc<br>
-                                Details Phone<br>
-                                Details Email<br>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="doctors col-md-6 col-sm-12 ourdoc-div">
-                        <img src="img\team-4.jpg" class="doctors_img">
-                        <div class="doctors_detail">
-                            <h1>Henry  Doe</h1>
-                            <p>
-                                Details Clinc<br>
-                                Details Phone<br>
-                                Details Email<br>
-                            </p>
-                        </div>
-                    </div>
+                        @endforeach
+                    @endif
+                    @endif
+
+
                 </div>
             </div>
 

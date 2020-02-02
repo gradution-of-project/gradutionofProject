@@ -6,7 +6,7 @@ use App\user;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-
+use App\doctor;
 
 class userController extends Controller
 {
@@ -30,7 +30,8 @@ class userController extends Controller
              $user->phone = $request->input('phone');
              if ($request->hasFile('image')) {
                  $file = $request->file('image');
-                 $namefile = $file->getClientOriginalName();
+                 $exetantion = $file->getClientOriginalName();
+                 $namefile = time() .'.'.$exetantion;
                   $file->move(  'publicimages/',$namefile);
                   $user->image=$namefile;
              } else {
@@ -79,7 +80,8 @@ class userController extends Controller
         public function logout(){
         Auth::logout();
         session()->forget('data');
-            return redirect()->route('/');
+         $datadoctor= doctor::all();
+            return redirect()->route('/',compact('datadoctor'));
         }
 
 }

@@ -12,7 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('home');
+    $datadoctor= \App\doctor::all();
+    return view('home',compact('datadoctor'));
 })->name('/');
 
 Route::get('/ask', function () {
@@ -42,10 +43,10 @@ Route::post('/adddoctors', 'doctorController@signup')->name('registdoctor');
 //Route::post('/login', 'doctorController@signin')->name('createLogin');
 Route::post('/ask', 'postController@savepost')->name('savepost');
 Route::get('/logout', 'userController@logout')->name('logout');
-
+Route::get('/home', 'HomeController@index')->name('home');
 
 
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/home', 'HomeController@index')->name('home');

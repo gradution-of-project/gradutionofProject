@@ -11,8 +11,8 @@
     <body>
         <!--  -----   navbar  ------    -->
         @extends("navbarextend");
-
-        @if(count($dataprofile) > 0)
+        @if(isset($dataprofile))
+           @if(count($dataprofile) > 0)
              @foreach($dataprofile as $edit)
 
 
@@ -27,7 +27,7 @@
                         <div class="container col-4 pro-picture">
                             <div>
 
-                                <img src="publicimages/_20200120_142155.JPG" id="imgg" class="rounded-circle">
+                                <img src="publicimages/{{$edit->image}}" id="imgg" class="rounded-circle">
                             </div>
                             <div class="">
                                 <button class="btn btn-primary photo-btn" >
@@ -104,21 +104,26 @@
                         </div>
                     </div>
                 </form>
-            <div class="alert alert-danger error">
+
                 @if(count($errors)>0)
+                <div class="alert alert-danger error">
                     @foreach($errors->all() as $error)
                     <p>{{$error}}</p>
                     @endforeach
+                </div>
                     @endif
                 @if(!empty($wrong))
+                <div class="alert alert-danger error">
                 <p>{{$wrong}}</p>
+
+                </div>
                     @endif
 
-            </div>
         </div>
 
              @endforeach
         @endif
+           @endif
         <!--     footer    -->
         <div class="footer">
             <div style="background: #111111;">
