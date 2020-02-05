@@ -12,9 +12,12 @@ class postController extends Controller
 
       public function __construct()
       {
-          $this->middleware('auth');
+
       }
 
+      public function index(){
+          return view('ask');
+      }
   public function savepost(Request $request){
 
         $post =new post();

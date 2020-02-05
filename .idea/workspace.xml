@@ -3,17 +3,22 @@
   <component name="ChangeListManager">
     <list default="true" id="e5b70ce8-c1fc-44d8-b8b9-923de61df0df" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/doctorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/doctorController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/editprofileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/editprofileController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/postController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/postController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/userController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/userController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/doctor.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/doctor.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/co.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/co.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/adddoctor.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/adddoctor.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/editProfile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/editProfile.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/ask.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/ask.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/comment.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/comment.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/navbarextend.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/navbarextend.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -188,7 +193,10 @@
       <workItem from="1580379099564" duration="19230000" />
       <workItem from="1580468131803" duration="29512000" />
       <workItem from="1580596143000" duration="2435000" />
-      <workItem from="1580641634877" duration="1188000" />
+      <workItem from="1580641634877" duration="12815000" />
+      <workItem from="1580848910213" duration="8870000" />
+      <workItem from="1580892772864" duration="8034000" />
+      <workItem from="1580912826868" duration="219000" />
     </task>
     <servers />
   </component>
@@ -200,21 +208,21 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="488" y="50" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1580511898573" />
-    <state x="413" y="120" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1579780609912">
+    <state x="413" y="120" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1580894264528">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="120" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1579780609912" />
+    <state x="413" y="120" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1580894264528" />
     <state x="101" y="0" key="SettingsEditor" timestamp="1579406556076">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="101" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1579406556076" />
-    <state x="391" y="193" key="com.intellij.ide.util.TipDialog" timestamp="1580596167707">
+    <state x="391" y="193" key="com.intellij.ide.util.TipDialog" timestamp="1580912836550">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="391" y="193" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1580596167707" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1578963161027">
+    <state x="391" y="193" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1580912836550" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1580899871994">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1578963161027" />
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1580899871994" />
   </component>
 </project>

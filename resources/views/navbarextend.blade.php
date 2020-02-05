@@ -12,7 +12,7 @@
                     <a class="nav-link" href="/#firstPage">HOME <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/ask">ASK DOCTOR</a>
+                    <a class="nav-link" href="{{url('/ask')}}">ASK DOCTOR</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/#dental_services">DENTAL SERVICES</a>

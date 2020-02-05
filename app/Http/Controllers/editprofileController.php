@@ -28,8 +28,7 @@ class editprofileController extends Controller
         }
         $this->validate($request, [
             'oldpassword' => 'required',
-            'newpassword'=>'required',
-            'confirampassword'=>'required_with:newpassword|same:newpassword',
+
         ]);
 
         if (!(Hash::check($request->oldpassword, $password))) {

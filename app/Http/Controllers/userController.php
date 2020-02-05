@@ -55,12 +55,12 @@ class userController extends Controller
 
             if(Auth::attempt(['email'=> $request['email'], 'password'=>$request['password']])){
                   return redirect()->route('/');
-            }else{
+            }
+          else{
 
-                 return redirect()->back()->with('user','sorry email or password is invalid tray again');
+                return redirect()->back()->with('user','sorry email or password is invalid tray again');
 
             }
-
         }
 
 

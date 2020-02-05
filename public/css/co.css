@@ -1,14 +1,18 @@
 body{
-    background-image: url("chose-back.jpg");
+   /* background-image: url("chose-back.jpg");
     background-size: cover;
-    background-attachment: fixed;
+    background-attachment: fixed;*/
+
     padding-top: 1%;
-    
+
+}
+.container{
+    width: 900px;
 }
 textarea.form-control{
     padding: 8px;
     overflow: hidden;
-    
+
     resize: none;
 }
 /*  the main comment*/
@@ -19,8 +23,10 @@ textarea.form-control{
 }
 .upload-img-bt{
     float: left;
+
 }
 .add-post-submit{
+
     float: right;
 }
 
@@ -35,7 +41,7 @@ textarea.form-control{
 .person_comment_img ,.comment_img{
     width: 80px;
     height: 80px;
-    
+
 }
 
 
@@ -80,8 +86,8 @@ textarea.form-control{
     right: 10px;
 }
 .btn-primary{
-    color: #007bff;
-    background-color: transparent;
+    color: #e2e3e5;
+    background-color: #007bf0;
 }
 
 /*  anwser  */

@@ -1,5 +1,6 @@
 <?php
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,10 +17,6 @@ Route::get('/', function () {
     return view('home',compact('datadoctor'));
 })->name('/');
 
-Route::get('/ask', function () {
-  return view('ask');
-
-});
 
 Route::get('/comment', function () {
     return view('comment');
@@ -32,11 +29,16 @@ Route::get('/register', function () {
 Route::get('/adddoctor', function () {
     return view('adddoctor');
 });
+Route::group(['middleware' => 'auth'], function () {
+
+    Route::get('/ask', 'postController@index');
+});
 
     Route::get('/editprofile', 'editprofileController@showprofile')->name('editprofile');
     Route::post('/editprofile', 'editprofileController@updateprofile')->name('updateprofile');
-    Route::post('/auth.register', 'userController@signup')->name('register');
+    Route::post('/registertion', 'userController@signup')->name('registertion');
     Route::post('/loginuser', 'userController@signin')->name('login');
+   // Route::post('/logindoctor', 'doctorController@signin')->name('login');
 
 
 Route::post('/adddoctors', 'doctorController@signup')->name('registdoctor');

@@ -26,7 +26,7 @@
             <!-- details of the person put post-->
             <div class="col-2 text-center">
                 <div>
-                    <img class="person_comment_img rounded-circle" src="{{Session::get('data.image')}}">
+                    <img class="person_comment_img rounded-circle" src="img/background-1.jpg">
                     <div class="text-center">user name</div>
                 </div>
             </div>
@@ -82,7 +82,7 @@
                         <div class="row">
                             <div class="col-2" style="float: left;">
                                 <div class="text-center">
-                                    <img class="comment_img rounded-circle" src="img/1.jpg" >
+                                    <img class="comment_img rounded-circle" src="img/background-1.jpg" >
                                     <div >user name</div>
                                 </div>
 

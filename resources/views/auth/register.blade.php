@@ -83,7 +83,8 @@
         </div>
         <div class="bt-back-regist">Back</div>
 
-        <form class="px-4 py-3" action="{{route('register')}}" method="post" enctype="multipart/form-data">
+        <form class="px-4 py-3" action="{{route('registertion')}}" method="post" enctype="multipart/form-data">
+
             <!--First,Last Name-->
             <div class="form-row">
                 <div class="form-group col fname-div {{ $errors->has('fname') ? 'has-error':'' }}">

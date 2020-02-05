@@ -136,46 +136,102 @@
                         <img src="img\services-1.jpg" id="service-img" class="col-lg-12">
                         <h4>Root Canal Treatment</h4>
                         <p>
-                                removal of dental pulp ,cleaning the root canal and filling it with
-                                suitable restoration.
+                            A root canal is a treatment used to repair and save a tooth
+                            that is badly decayed or becomes infected. During a root canal
+                            procedure, the nerve and pulp are removed and the inside of the
+                            tooth is cleaned and sealed. Without treatment, the tissue surrounding
+                            the tooth will become infected and abscesses may form.
+                            "Root canal" is the term used to describe the natural cavity
+                            within the center of the tooth. The pulp or pulp chamber is the soft
+                            area within the root canal. The tooth's nerve lies within the root canal.
                         </p>
                     </div>
                     <div class="col-lg-4 col-sm-6 col-xs-12 service-div">
                         <img src="img\services-2.jpg" id="service-img" class="col-lg-12">
-                        <h4>Extraction</h4>
+                        <h4>Dentures</h4>
                         <p>
-                                the removal of tooth out of the mouth
+                            A denture is a removable replacement for missing
+                            teeth and surrounding tissues. Two types of dentures are
+                            available -- complete and partial dentures. Complete dentures
+                            are used when all the teeth are missing, while partial dentures
+                            are used when some natural teeth remain.
+                            Complete Dentures
+                            Complete dentures can be either "conventional" or "immediate."
+                            Made after the teeth have been removed and the gum tissue has begun
+                            to heal, a conventional denture is ready for placement in the mouth
+                            about eight to 12 weeks after the teeth have been removed.
                         </p>
                     </div>
                     <div class="col-lg-4 col-sm-6 col-xs-12 service-div">
                         <img src="img\services-3.jpg" id="service-img" class="col-lg-12">
                         <h4>Fillings</h4>
                         <p>
-                                the process of removal of dental caries and replace missing tooth
-                                structure by artifical restoration
+                            A filling is a way to restore a tooth damaged by decay back to its
+                            normal function and shape. When a dentist gives you a filling, he
+                            or she first removes the decayed tooth material, cleans the affected
+                            area, and then fills the cleaned out cavity with a filling material.
+                            By closing off spaces where bacteria can enter, a filling also helps
+                            prevent further decay. Materials used for fillings include gold,
+                            porcelain, a composite resin (tooth-colored fillings), and an amalgam
+                            (an alloy of mercury, silver, copper, tin and sometimes zinc).
                         </p>
                     </div>
                     <div class="col-lg-4 col-sm-6 col-xs-12 service-div">
                         <img src="img\services-4.jpg" id="service-img" class="col-lg-12">
                         <h4>Scaling</h4>
                         <p>
-                                removal of calaulas
+                            Dental scaling is routinely performed to help patients with gum
+                            disease and excessive plaque buildup. While a standard cleaning
+                            will address the surface of the tooth, scaling goes much deeper.
+                            If your dentist suggests dental scaling and root planing for your teeth,
+                            it’s helpful to know what this means so you can prepare for what’s ahead.
+                            Understanding Scaling
+                            Scaling is a common dental procedure for patients
+                            with gum disease. This is a type of dental cleaning that
+                            reaches below the gumline to remove plaque buildup.
+                            The process of scaling and root planing the teeth is often referred
+                            to as a deep cleaning. This treatment goes beyond the general cleaning
+                            that you receive with your regular checkup and annual visit.
+
                         </p>
                     </div>
                     <div class="col-lg-4 col-sm-6 col-xs-12 service-div">
                         <img src="img\services-5.jpg" id="service-img" class="col-lg-12">
-                        <h4>Fixed Prosthesis</h4>
+                        <h4>Prevention of tooth decay</h4>
                         <p>
-                                restoring mised natural teeth by fixed artifical teeth
-                                (crowns ,bridges)
+                            Tooth decay is parts of teeth with rot that may progress to
+                            small or large holes gradually.
+
+                            Tooth decay is one of the most common health
+                            problems around the world. It is widespread, mainly, among children
+                            and adolescents, but every person in his mouth has teeth that may develop
+                            cavities. And if tooth decay is not treated, the holes may get bigger and wider
+                            , causing severe pain, inflammation,
+                            and even tooth loss and other complications.
+                            Cleaning (rubbing) the teeth after eating or drinking
+
+                            Mouth rinse
+                            Visit a dentist regularly
+                            Checking the possibility of tightening gaps between teeth
+                            Drinking water from taps (faucets)
+                            Refrain as much as possible from eating snacks and sweetened drinks
+                            Eat foods that strengthen dental health
+                            Fluoride treatment
+                              Use antibacterial agents, if necessary
                         </p>
                     </div>
                     <div class="col-lg-4 col-sm-6 col-xs-12 service-div">
                         <img src="img\services-6.jpg" id="service-img" class="col-lg-12">
                         <h4>Teeth Whitening</h4>
                         <p>
-                                On the other hand, we denounce with righteous indignation and
-                                dislike men who are so beguiled and demoralized by the charms...
+                            Teeth whitening is a change from the color of the tooth
+                            to a lighter color and is a conservative method for treating tooth
+                            discoloration and meets the needs of an increasing number of patients
+                            who require a whiter smile, moreover, teeth whitening is technically easier
+                            and less expensive than any other type of treatment Aesthetic, such as
+                            veners treatment. Teeth whitening can be achieved either by changing
+                            the internal color or by removing and controlling the formation
+                            of external stains.
                         </p>
                     </div>
 

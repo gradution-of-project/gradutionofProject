@@ -198,13 +198,13 @@ $(function(){
    });
 
 
-      if ( $('.email-input1 , .fname-input, .lname-input ,.descripe-input, .phone-input').val() != '') {
+      if ( $('.email-input1 ,.email-input, .fname-input, .lname-input ,.descripe-input, .phone-input').val() != '') {
           $('.fname-char').css({'color':'#007BFF'});
           $('.fname-char').animate({'top':'9px'},500);
           $('.lname-char').css({'color':'#007BFF'});
           $('.lname-char').animate({'top':'9px'},500);
-          $('.email-char1').css({'color':'#007BFF'});
-          $('.email-char1').animate({'top':'9px'},500);
+          $('.email-char1, .email-char').css({'color':'#007BFF'});
+          $('.email-char1 , .email-char').animate({'top':'9px'},500);
           $('.descripe-char').css({'color':'#007BFF'});
           $('.descripe-char').animate({'top':'9px'},500);
           $('.descripe-char').text('Description');
