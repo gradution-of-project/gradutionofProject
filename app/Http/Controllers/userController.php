@@ -10,8 +10,10 @@ use App\doctor;
 
 class userController extends Controller
 {
-
-
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 
 
     public function signup(Request $request){
@@ -80,7 +82,7 @@ class userController extends Controller
         public function logout(){
         Auth::logout();
         session()->forget('data');
-         $datadoctor= doctor::all();
+         $datadoctor= user::all();
             return redirect()->route('/',compact('datadoctor'));
         }
 

@@ -34,13 +34,14 @@
                 @endphp
                 <li class="nav-item">
                     <!------drop down profile list------->
-                    <div class="btn-group profile-div">
+
+                            @php
+                                if (!(Auth::guest())){
+                       echo '<div class="btn-group profile-div">
                         <button type="button" class="btn profile-btn">
                             <img class="profile-img" src="img\choseuse.png">
                         </button>
-                        <div class="dropdown-menu profile-menu">
-                            @php
-                                if (!(Auth::guest())){
+                        <div class="dropdown-menu profile-menu">';
                                   echo '<a class="dropdown-item" href="/editprofile">
                                 <i class="fas fa-user"></i><span style="padding-left:10px;">Profile</span>
                             </a>
@@ -48,12 +49,13 @@
                                 <i class="fas fa-comment"></i><span style="padding-left:10px;">Comment</span>
                             </a>';
                                 }
-
+                                 if(!(Auth::guest()) && auth()->user()->role=='Admin'){
 
                            echo '<a class="dropdown-item" href="/adddoctor">
                                 <i class="fas fa-user-md"></i><span style="padding-left:10px;">Add Doctor</span>
                             </a>
                             <div class="dropdown-divider"></div>';
+                           }
                             if(!(Auth::guest())){
                            echo '<a class="dropdown-item" href="'.route('logout').'">
                                 <i class="fas fa-sign-out-alt"></i><span  style="padding-left:10px;">Log Out</span>

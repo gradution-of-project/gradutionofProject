@@ -13,7 +13,7 @@
 */
 
 Route::get('/', function () {
-    $datadoctor= \App\doctor::all();
+    $datadoctor= \App\user::all();
     return view('home',compact('datadoctor'));
 })->name('/');
 
@@ -29,10 +29,7 @@ Route::get('/register', function () {
 Route::get('/adddoctor', function () {
     return view('adddoctor');
 });
-Route::group(['middleware' => 'auth'], function () {
 
-    Route::get('/ask', 'postController@index');
-});
 
     Route::get('/editprofile', 'editprofileController@showprofile')->name('editprofile');
     Route::post('/editprofile', 'editprofileController@updateprofile')->name('updateprofile');
@@ -43,8 +40,22 @@ Route::group(['middleware' => 'auth'], function () {
 
 Route::post('/adddoctors', 'doctorController@signup')->name('registdoctor');
 //Route::post('/login', 'doctorController@signin')->name('createLogin');
-Route::post('/ask', 'postController@savepost')->name('savepost');
-Route::get('/logout', 'userController@logout')->name('logout');
+Route::post('/savepost', 'postController@savepost')->name('saveposts');
+Route::get('/readData', 'postController@readData');
+Route::get('/readDatacomment', 'commentController@readData');
+
+Route::post('/savecomment', 'commentController@addcomment')->name('savecomments');
+
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/logout', 'userController@logout')->name('logout');
+   Route::get('/ask', 'postController@index')->name('ask');
+    Route::get('/asks', 'postController@showdata')->name('showpost');
+    Route::get('/{id}', 'commentController@showdatacomment')->name('showcomment');
+    //Route::post('/askcc/{id}', 'commentController@showdatacomment')->name('showcomment');
+
+});
+
+
 Route::get('/home', 'HomeController@index')->name('home');
 
 

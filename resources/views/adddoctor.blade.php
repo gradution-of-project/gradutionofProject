@@ -69,7 +69,7 @@
                     <div class="form-group" >
 
                         <select class="form-control select-input" name="sl-gender"  >
-                            <option value="0" disabled selected></option>
+                            <option value="0" disabled selected>Gender</option>
                             <option value="male">Male</option>
                             <option value="female">Female</option>
                         </select>
@@ -99,8 +99,8 @@
 
                         <select class="form-control select-input" name="sl-role">
                             <option value="0" disabled selected>Role</option>
-                            <option value="male">Admain</option>
-                            <option value="female">normal doctor</option>
+                            <option value="Admin">Admin</option>
+                            <option value="doctor">doctor</option>
                         </select>
                     </div>
                     <!--  Profile Image -->

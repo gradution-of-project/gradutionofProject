@@ -18,11 +18,9 @@ class CreateCommentsTable extends Migration
             $table->string('body');
             $table->mediumText('image');
             $table->bigInteger('id_user')->unsigned();
-            $table->bigInteger('id_doctor')->unsigned();
             $table->bigInteger('id_post')->unsigned();
             $table->timestamps();
             $table->foreign('id_user')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('id_doctor')->references('id')->on('doctors')->onDelete('cascade');
             $table->foreign('id_post')->references('id')->on('posts')->onDelete('cascade');
         });
     }

@@ -127,12 +127,14 @@
             </div>
             <!--Date-->
             <div class="form-group">
-                <input class="form-control date-input" type="date" name="brithdate" value="{{ Request::old('brithdate')}}>
+                <input class="form-control date-input" type="date" name="brithdate" value="{{ Request::old('brithdate')}}">
             </div>
+
             <!--  phone-->
             <div class="form-group phone-div">
                 <input type="text" class="form-control phone-input" id="exampleDropdownFormEmail1" name="phone" value="{{ Request::old('phone')}}">
                 <span class="phone-char">Phone</span>
+
             </div>
             <!--  Profile Image -->
             <div class="container pro-picture">

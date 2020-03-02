@@ -1,5 +1,5 @@
 body{
-    margin-top: 70px;
+    margin-top: 50px;
 }
 
 /*      nav bar     */
@@ -10,7 +10,7 @@ body{
     /*height: 90px;*/
     font-weight: 500;
     zoom: 85%;
-    
+
 }
 .navbar-light .navbar-nav .nav-link:hover{
     color: #62BEE4;
@@ -23,18 +23,18 @@ body{
     border: 2px solid #40B0DE;
     border-radius: 153px;
     background: #62BEE4;
-    
+
 }
 .sign-in:hover{
     background: transparent;
-    
+
 }
 
 /* profile-button */
 .profile-btn{
     width: 55px;
     height: 42px;
-    
+
 }
 .profile-img{
     width: 100%;

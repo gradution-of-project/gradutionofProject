@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\doctor;
+use App\user;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,7 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $datadoctor= doctor::all();
+        $datadoctor= user::all();
         return view('home',compact('datadoctor'));
     }
 

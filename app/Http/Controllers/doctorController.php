@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\doctor;
+use App\user;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -13,7 +14,7 @@ class doctorController extends Controller
 
     public function signup(Request $request){
 
-        $doctor =new doctor();
+        $doctor =new user();
         if($this->validation($request)) {
             $data=$request->input();
 
@@ -22,8 +23,7 @@ class doctorController extends Controller
             $doctor->fristname = $request->input('fname');
             $doctor->lastname = $request->input('lname');
             $doctor->email = $request->input('email');
-            $doctor->password = $request->input('password');
-            $doctor->confrimpassword = $request->input('confrimpassword');
+            $doctor->password = bcrypt($request->input('password'));
             $doctor->gender = $request->input('sl-gender');
             $doctor->brithdate = $request->input('brithdate');
             $doctor->phone = $request->input('phone');
@@ -40,7 +40,9 @@ class doctorController extends Controller
                 return $request;
                 $doctor->image='';
             }
-            $doctor->save();
+           if( $doctor->save()){
+               $this->signin($request);
+           }
             return  redirect()->route('/');
         }
 

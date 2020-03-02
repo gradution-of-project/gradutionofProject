@@ -281,6 +281,7 @@
                     @if(isset($datadoctor) )
                     @if( count($datadoctor ) > 0)
                         @foreach($datadoctor  as $data)
+                            @if($data->role=='Admin' || $data->role=='doctor')
                     <div class="doctors col-md-6 col-sm-12 ourdoc-div">
                         <img src="publicimages\{{$data->image}}" class="doctors_img">
                         <div class="doctors_detail">
@@ -294,6 +295,7 @@
                             </p>
                         </div>
                     </div>
+                                @endif
                         @endforeach
                     @endif
                     @endif
