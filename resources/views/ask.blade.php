@@ -59,11 +59,12 @@
 
             <div class="col-10">
                 <p class="postbody">{{$post->body}}</p>
-                @php
-                   $images= json_decode($post->imagepost,true);
-                  //      echo count($images);
-                @endphp
+                @if(isset($post->imagepost))
+                @foreach(explode(',',$post->imagepost) as $img)
 
+                    <img class="replay-image" src="publicimages\{{$img}}">
+                @endforeach
+                 @endif
                 <img class="" src="publicimages">
 
                 <!-- interaction  like comment -->
@@ -75,13 +76,23 @@
                         <i class="fas fa-thumbs-up"></i>
                         like
                     </div>
+
                     <div class="interaction-comment">
-                            <a href="{{route('showcomment', $post->id)}}"><span id="numcomment">0 </span>
+                        @if(isset($allcomment))
+                            @foreach($allcomment as $comment)
+                                @if($post->id ==$comment->id_post)
+                        <span id="numcomment">{{$numcomment}}</span>
+                                @endif
+                            @endforeach
+                        @endif
+                            <a href="{{route('showcomment', $post->id)}}">
                                 <i class="fas fa-comment-alt"></i>
                                 comment </a>
 
 
                     </div>
+
+
                 </div>
 
 
@@ -137,7 +148,11 @@
                             <div class="col-10" style="float: left;">
                                 <!--  text replay -->
                                 <p>replay 1</p>
-                                <img class="replay-image" src="">
+                                @if(isset($comment->imagecomment))
+                                @foreach(explode(',',$comment->imagecomment) as $img)
+                                <img class="replay-image" src=""publicimages\{{$img}}">
+                                @endforeach
+                                @endif
                                 <!-- interaction replay like comment -->
                                 <div class="interaction-replay">
                                     <div class="interaction-like">

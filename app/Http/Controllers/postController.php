@@ -31,7 +31,7 @@ class postController extends Controller
                  $file->move('publicimages/',$filename);
                  array_push($nameImages,$filename);
             }
-            $post->imagepost=json_encode($nameImages);
+            $post->imagepost=implode(',',$nameImages);
         }
 
        $post->save();
@@ -44,8 +44,11 @@ class postController extends Controller
     }
 
     public function  showdata(){
+          $comment=DB::table('comments')->select('comments.*')->get();
+          $numcomment =count($comment);
         $allpost= DB::table('users')->join('posts','posts.id_user','users.id')->select('users.*','posts.*')->get();
-        return view('/ask',compact('allpost'));
+
+        return view('/ask',compact('allpost','numcomment'));
     }
 
 }

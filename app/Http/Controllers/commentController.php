@@ -38,7 +38,9 @@ class commentController extends Controller
             ->where('posts.id','=',$id)
             ->join('users','comments.id_user','=','users.id')
             ->select('users.*','comments.*','posts.*')->get();
-        return view('/ask',compact('allcomment','allpost'));
+        $numcomment=count($allcomment);
+
+        return view('/ask',compact('allcomment','allpost','numcomment'));
     }
     public function  readData(){
         $allcomment= DB::table('comments')->join('posts','comments.id_post','=','posts.id')->join('users','comments.id_user','users.id')->

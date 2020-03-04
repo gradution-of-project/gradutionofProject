@@ -49,7 +49,7 @@ Route::post('/savecomment', 'commentController@addcomment')->name('savecomments'
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/logout', 'userController@logout')->name('logout');
    Route::get('/ask', 'postController@index')->name('ask');
-    Route::get('/asks', 'postController@showdata')->name('showpost');
+    Route::get('/ask', 'postController@showdata')->name('showpost');
     Route::get('/{id}', 'commentController@showdatacomment')->name('showcomment');
     //Route::post('/askcc/{id}', 'commentController@showdatacomment')->name('showcomment');
 
